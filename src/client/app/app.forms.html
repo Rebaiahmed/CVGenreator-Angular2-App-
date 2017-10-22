@@ -1,0 +1,92 @@
+<div class="row">
+        <form class="col s12">
+    
+    
+          <div class="row">
+            <div class="input-field col s12">
+              <input  id="first_name" type="text" name="name"
+              
+              [(ngModel)]="cv.nom"
+              class="validate">
+              <label for="first_name">Nom</label>
+            </div>
+           
+          </div>
+    
+    
+    
+          <div class="row">
+              <div class="input-field col s12">
+                <input name="prenom"  [(ngModel)]="cv.prenom"  id="first_name" type="text" class="validate">
+                <label for="first_name">Prénom</label>
+              </div>
+             
+            </div>
+         
+    
+    
+            <div class="row">
+                <div class="input-field col s12">
+                  <input  id="first_name" [(ngModel)]="cv.email" name="email" type="email" class="validate">
+                  <label for="first_name">Email</label>
+                </div>
+               
+              </div>
+        
+    
+    
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="number" name="age" [(ngModel)]="cv.age" class="validate">
+              <label for="email">Age</label>
+            </div>
+          </div>
+      
+    
+    
+    
+    <div class="row">
+    
+        <button class="btn waves-effect waves-light" (click)="JSON()" name="action">
+          Génerer JSON
+            <i class="material-icons right">send</i>
+          </button>
+                
+    </div>
+    
+    
+    <div class="row">
+        
+            <button class="btn waves-effect waves-light" (click)="XML()" name="action">
+              Génerer XML
+                <i class="material-icons right">send</i>
+              </button>
+                    
+        </div>
+
+
+
+        <div class="row">
+            
+                <button class="btn waves-effect waves-light cyan darken-1" (click)="CV()" name="action">
+                  Génerer  CV
+                    <i class="material-icons right">send</i>
+                  </button>
+                        
+            </div>    
+    
+           
+        </form>
+      </div>
+         
+      
+    
+    
+      <div class="card-panel teal lighten-2">
+        {{this.xmldata._body}}
+      </div>
+    
+    
+      <div class="card-panel teal lighten-2">
+          {{this.jsondata._body}}
+        </div>
